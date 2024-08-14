@@ -1,0 +1,108 @@
+.container {
+    flex: 0.7;
+    height: 100vh;
+    width: 100vw;
+    background: #DAE5F5;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    flex: 0.1;
+    justify-content: start;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background: #001F8B;
+}
+
+.note {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.noteIcon {
+    background-color: #fff;
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.noteText {
+    font-size: 18px;
+    margin-left: 5px;
+    color: white;
+}
+
+.notesSection {
+    width: 95%;
+    height: 180px;
+    margin-bottom: 20px;
+    display: flex;
+    border-radius: 9px;
+    background-color: white;
+    justify-content: center;
+    padding: 10px 0;
+    position: relative;
+}
+
+.timeStamp {
+    margin-left: auto;
+    display: block;
+    margin-top: auto;
+}
+
+.text {
+    flex: 0.65;
+    padding: auto;
+    overflow-y: auto;
+    margin-left: 5%;
+    padding-top: 5px;
+}
+
+.textArea {
+    flex: 0.25;
+    display: flex;
+    height: 200px;
+    align-items: center;
+    position: sticky;
+    top: 529px;
+    border-radius: 9px;
+    background-color: #001F8B;
+    padding: 20px;
+}
+
+.textInput {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 25px;
+    font-size: 20px;
+    border-radius: 9px;
+    align-items: start;
+    justify-content: start;
+    resize: none;
+    position: relative;
+}
+
+.createButton {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: white;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
