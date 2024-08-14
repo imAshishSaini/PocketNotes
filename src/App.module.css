@@ -1,4 +1,4 @@
-/* .container {
+.container {
   display: flex;
   height: 100vh;
   width: 100vw;
@@ -7,59 +7,5 @@
 @media (max-width: 768px) {
   .right {
     display: none;
-  }
-} */
-
-
-
-.container {
-  display: flex;
-  height: 100vh;
-  width: 100vw;
-}
-
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column; /* Stacks the sections vertically on mobile */
-  }
-
-  .left-section {
-    width: 100%; /* Full width for the list view */
-    height: 100%; /* Full height for the list view */
-    overflow-y: auto;
-  }
-
-  .right-section {
-    width: 100%; /* Full width for the note detail view */
-    height: 100%; /* Full height for the note detail view */
-    overflow-y: auto;
-    position: relative; /* Ensure proper stacking of the back button */
-  }
-
-  .no-notes-selected {
-    display: none; /* Hide NoNotesSelected on mobile */
-  }
-
-  .backButton {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-}
-
-@media (min-width: 769px) {
-  .left-section {
-    width: 30%;
-    border-right: 1px solid #ccc;
-  }
-
-  .right-section {
-    width: 70%;
   }
 }
