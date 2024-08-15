@@ -110,3 +110,14 @@
     bottom: 30px;
     right: 30px;
 }
+
+@media (max-width: 768px) {
+    .container {
+        flex: none;
+        overflow-y: auto;
+        overflow-x: auto;
+    }
+    .notesSection {
+        height: 300px;
+    }
+}
