@@ -14,6 +14,13 @@ function App() {
 
   const [selectedNote, setSelectedNote] = useState(null)
   const [showModal, setShowModal] = useState(false)
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768)
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768)
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
 
   useEffect(() => {
     localStorage.setItem('notes', JSON.stringify(notes))
@@ -47,15 +54,11 @@ function App() {
 
   return (
     <div className={styles.container}>
-      <LeftSection notes={notes} onNoteClick={handleSelectedNote} onAddNote={handleAddNote}/>
-      {selectedNote ? <RightSection note={selectedNote} onNoteUpdated={handleNoteUpdated}/> : <NoNotesSelected/>}
+      {(!isMobile || (isMobile && !selectedNote)) && <LeftSection notes={notes} onNoteClick={handleSelectedNote} onAddNote={handleAddNote}/>}
+      {(!isMobile || (isMobile && selectedNote)) && (selectedNote ? <RightSection note={selectedNote} onNoteUpdated={handleNoteUpdated}/> : <NoNotesSelected/>)}
       {showModal && <CreateNoteModal showModal={() => setShowModal(false)} onAddNote={handleCreateNote}/>}
     </div>
   )
 }
 
-<<<<<<< HEAD
 export default App
-=======
-export default App
->>>>>>> 38a557d (update)

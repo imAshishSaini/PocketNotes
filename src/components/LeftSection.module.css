@@ -40,7 +40,8 @@
 }
 
 .notesList {
-    padding: 0px;
+    padding: 10px;
+    margin-top: 40px;
     overflow-y: auto;
 }
 
@@ -87,8 +88,12 @@
 ::-webkit-scrollbar-thumb {
     background-color: #FFFFFF;
     border-radius: 4.5px;
-<<<<<<< HEAD
   }
-=======
-  }
->>>>>>> 38a557d (update)
+
+  @media (max-width: 768px) {
+    .container {
+        flex: none;
+        overflow-y: auto;
+        overflow-x: auto;
+    }
+}
