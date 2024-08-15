@@ -54,4 +54,8 @@ function App() {
   )
 }
 
+<<<<<<< HEAD
 export default App
+=======
+export default App
+>>>>>>> 38a557d (update)
